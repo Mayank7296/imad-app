@@ -17,11 +17,11 @@ app.get('/resume',function(req, res){
 });
 
 app.get('/profile-page',function(req, res){
-  res.send("Mayank's Profile is Great Please Hire him!!");
+  res.sendFile(path.join(__dirname, 'ui', 'profile-page.html'));
 });
 
 app.get('/portfolio',function(req, res){
-  res.send("Hi! Mayank's Portfolio has many projects Please Have a look in Resume");
+  res.sendFile(path.join(__dirname, 'ui', 'portfolio.html'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
