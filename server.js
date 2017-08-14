@@ -8,25 +8,12 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
-app.get('/resume',function(req, res){
-  res.send("Resume Will start downloading in short time!");
-});
-
-app.get('/profile-page',function(req, res){
-  res.send("Mayank's Profile is Great Please Hire him!!");
-});
-
-app.get('/portfolio',function(req, res){
-  res.send("Hi! Mayank's Portfolio has many projects Please Have a look in Resume");
-});
-
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
 app.get('/resume',function(req, res){
-  res.send("Resume Will start downloading in short time!");
+  res.sendFile(path.join(__dirname, 'ui', 'resume.html'));
 });
 
 app.get('/profile-page',function(req, res){
